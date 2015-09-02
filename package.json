@@ -1,0 +1,66 @@
+{
+  "name": "eslint-rules-default",
+  "version": "0.0.0",
+  "description": "A set of default rules for ESLint.",
+  "author": {
+    "name": "Athan Reines",
+    "email": "kgryte@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "Athan Reines",
+      "email": "kgryte@gmail.com"
+    }
+  ],
+  "scripts": {
+    "test": "mocha",
+    "test-cov": "istanbul cover ./node_modules/.bin/_mocha --dir ./reports/coverage -- -R spec",
+    "codecov": "istanbul cover ./node_modules/.bin/_mocha --dir ./reports/codecov/coverage --report lcovonly -- -R spec && cat ./reports/codecov/coverage/lcov.info | codecov && rm -rf ./reports/codecov"
+  },
+  "main": "./lib",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kgryte/eslint-rules-default.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "config",
+    "javascript",
+    "js",
+    "style",
+    "guide",
+    "styleguide",
+    "syntax",
+    "lint",
+    "jshint",
+    "jslint",
+    "code",
+    "policy",
+    "quality",
+    "standard",
+    "default",
+    "rules"
+  ],
+  "bugs": {
+    "url": "https://github.com/kgryte/eslint-rules-default/issues"
+  },
+  "dependencies": {
+    "utils-merge2": "^1.0.0",
+    "eslint-rules-best-practices": "^1.0.0",
+    "eslint-rules-errors": "^1.0.0",
+    "eslint-rules-es2015": "^1.0.0",
+    "eslint-rules-legacy": "^1.0.0",
+    "eslint-rules-nodejs": "^1.0.0",
+    "eslint-rules-strict": "^1.0.0",
+    "eslint-rules-style": "^1.0.0",
+    "eslint-rules-variables": "^1.0.0"
+  },
+  "devDependencies": {
+    "chai": "3.x.x",
+    "codecov.io": "^0.1.5",
+    "istanbul": "^0.3.0",
+    "mocha": "2.x.x"
+  },
+  "license": "MIT"
+}
